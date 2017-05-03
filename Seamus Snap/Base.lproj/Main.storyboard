@@ -103,7 +103,7 @@
                         <rightBarButtonItems>
                             <barButtonItem id="Cjf-nP-UoG">
                                 <connections>
-                                    <segue destination="uOO-1D-uR9" kind="show" id="Z3h-hM-bby"/>
+                                    <segue destination="uOO-1D-uR9" kind="show" id="Rkt-JE-cY7"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="add" id="aP5-aF-S8p"/>
@@ -114,10 +114,10 @@
             </objects>
             <point key="canvasLocation" x="1783.2" y="111.99400299850076"/>
         </scene>
-        <!--Title-->
+        <!--Picture View Controller-->
         <scene sceneID="7fo-zq-H2z">
             <objects>
-                <viewController id="uOO-1D-uR9" sceneMemberID="viewController">
+                <viewController id="uOO-1D-uR9" customClass="PictureViewController" customModule="Seamus_Snap" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jko-i9-c5g"/>
                         <viewControllerLayoutGuide type="bottom" id="cGB-t2-dnA"/>
@@ -125,9 +125,53 @@
                     <view key="view" contentMode="scaleToFill" id="ibo-YF-kU1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2vH-Mo-0bN">
+                                <rect key="frame" x="67" y="146" width="240" height="128"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hXn-so-pJV">
+                                <rect key="frame" x="139" y="302" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="lFg-q0-LNa"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lpp-w4-iBG">
+                                <rect key="frame" x="171" y="360" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextTapped:" destination="uOO-1D-uR9" eventType="touchUpInside" id="CXE-4F-DLm"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Lpp-w4-iBG" firstAttribute="top" secondItem="hXn-so-pJV" secondAttribute="bottom" constant="28" id="7fB-Lg-3bm"/>
+                            <constraint firstItem="Lpp-w4-iBG" firstAttribute="centerX" secondItem="ibo-YF-kU1" secondAttribute="centerX" id="9tk-dH-MNf"/>
+                            <constraint firstItem="hXn-so-pJV" firstAttribute="top" secondItem="2vH-Mo-0bN" secondAttribute="bottom" constant="28" id="QVb-TA-1ft"/>
+                            <constraint firstItem="2vH-Mo-0bN" firstAttribute="centerX" secondItem="hXn-so-pJV" secondAttribute="centerX" id="SMi-Ai-SW9"/>
+                            <constraint firstItem="2vH-Mo-0bN" firstAttribute="top" secondItem="jko-i9-c5g" secondAttribute="bottom" constant="82" id="T7K-Sa-Kko"/>
+                            <constraint firstItem="hXn-so-pJV" firstAttribute="centerX" secondItem="Lpp-w4-iBG" secondAttribute="centerX" id="XP7-lH-dM2"/>
+                            <constraint firstItem="2vH-Mo-0bN" firstAttribute="centerX" secondItem="ibo-YF-kU1" secondAttribute="centerX" id="Zxu-lg-kod"/>
+                            <constraint firstItem="cGB-t2-dnA" firstAttribute="top" secondItem="Lpp-w4-iBG" secondAttribute="bottom" constant="277" id="dUj-Tf-gVg"/>
+                            <constraint firstItem="2vH-Mo-0bN" firstAttribute="leading" secondItem="ibo-YF-kU1" secondAttribute="leadingMargin" constant="51" id="dXE-Dh-4sq"/>
+                            <constraint firstItem="Lpp-w4-iBG" firstAttribute="centerX" secondItem="ibo-YF-kU1" secondAttribute="centerX" id="p45-IN-Scu"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="Ffn-Tm-eaL"/>
+                    <navigationItem key="navigationItem" id="Ffn-Tm-eaL">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="U8W-2y-zFI">
+                            <connections>
+                                <action selector="cameraTapped:" destination="uOO-1D-uR9" id="BIl-TS-qh9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="descriptionTextField" destination="hXn-so-pJV" id="4Cg-7z-bXS"/>
+                        <outlet property="imageView" destination="2vH-Mo-0bN" id="lhX-Zm-2G2"/>
+                        <outlet property="nextButton" destination="Lpp-w4-iBG" id="pce-Tm-Niv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EdG-uo-d9d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
