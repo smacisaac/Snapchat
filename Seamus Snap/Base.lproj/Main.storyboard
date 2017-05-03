@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -99,11 +100,38 @@
                                 <action selector="logoutTapped:" destination="PEQ-cH-JgQ" id="PeR-Jh-HoG"/>
                             </connections>
                         </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem id="Cjf-nP-UoG">
+                                <connections>
+                                    <segue destination="uOO-1D-uR9" kind="show" id="Z3h-hM-bby"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="add" id="aP5-aF-S8p"/>
+                        </rightBarButtonItems>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ELy-SN-6nU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1783.2" y="111.99400299850076"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="7fo-zq-H2z">
+            <objects>
+                <viewController id="uOO-1D-uR9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jko-i9-c5g"/>
+                        <viewControllerLayoutGuide type="bottom" id="cGB-t2-dnA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ibo-YF-kU1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="Ffn-Tm-eaL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EdG-uo-d9d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2588" y="117"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BT7-dO-lMp">
