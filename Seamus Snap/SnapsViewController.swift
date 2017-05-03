@@ -20,5 +20,7 @@ class SnapsViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
    
+    @IBAction func addTapped(_ sender: Any) {
+    }
 
 }
