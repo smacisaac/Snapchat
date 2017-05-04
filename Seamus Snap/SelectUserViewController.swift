@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Firebase
 
 class SelectUserViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
     @IBOutlet weak var tableView: UITableView!
     
+    var users : [User] = []
     
     
     override func viewDidLoad() {
@@ -20,15 +22,37 @@ class SelectUserViewController: UIViewController, UITableViewDelegate, UITableVi
 
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        
+        FIRDatabase.database().reference().child("users").observe(FIRDataEventType.childAdded, with: {(snapshot) in
+        print (snapshot)
+            
+            
+            let user = User()
+            user.email = snapshot.value!["email"] as! String
+            
+           
+            //user.email = snapshot.value!["email"] as! String
+            
+            //user.uid = snapshot.value!.key
+            
+           // self.user.append.user()
+            //self.tableview.reloadData()
+        
+            
+        })
 
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = UITableViewCell()
+        let user = users[indexPath.row]
+        cell.textLabel?.text = user.email
+        
+        return cell
     }
   
 
