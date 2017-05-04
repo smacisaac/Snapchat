@@ -17,6 +17,9 @@ class SelectUserViewController: UIViewController, UITableViewDelegate, UITableVi
     var users : [User] = []
     
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,12 +37,7 @@ class SelectUserViewController: UIViewController, UITableViewDelegate, UITableVi
             self.users.append(user)
             self.tableView.reloadData()
            
-            //user.email = snapshot.value!["email"] as! String
-            
-            //user.uid = snapshot.value!.key
-            
-           // self.user.append.user()
-            //self.tableview.reloadData()
+
         
             
         })
@@ -58,7 +56,14 @@ class SelectUserViewController: UIViewController, UITableViewDelegate, UITableVi
         return cell
     }
   
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let user = users[indexPath.row]
+        let snap = ["from":user.email, "description":"hello","imageURL":"www.img.yeaa"]
+        
+        FIRDatabase.database().reference().child("users").child(user.uid).child("snaps").childByAutoId().setValue(snap)
+    }
+    
+    
     /*
     // MARK: - Navigation
 
