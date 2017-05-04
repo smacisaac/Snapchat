@@ -179,10 +179,10 @@
             </objects>
             <point key="canvasLocation" x="2588" y="116.49175412293854"/>
         </scene>
-        <!--View Controller-->
+        <!--Select User View Controller-->
         <scene sceneID="pVz-PW-fpd">
             <objects>
-                <viewController id="HeU-zH-o6f" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="HeU-zH-o6f" customClass="SelectUserViewController" customModule="Seamus_Snap" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="asW-Kt-gwp"/>
                         <viewControllerLayoutGuide type="bottom" id="Kbi-Se-nw8"/>
@@ -190,8 +190,23 @@
                     <view key="view" contentMode="scaleToFill" id="d41-Q2-zN7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CXL-4B-HWV">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Kbi-Se-nw8" firstAttribute="top" secondItem="CXL-4B-HWV" secondAttribute="bottom" id="A1z-BL-MEc"/>
+                            <constraint firstItem="CXL-4B-HWV" firstAttribute="leading" secondItem="d41-Q2-zN7" secondAttribute="leading" id="DRI-hb-Jg0"/>
+                            <constraint firstItem="CXL-4B-HWV" firstAttribute="top" secondItem="asW-Kt-gwp" secondAttribute="bottom" id="Uzo-sH-h1e"/>
+                            <constraint firstAttribute="trailing" secondItem="CXL-4B-HWV" secondAttribute="trailing" id="h4m-EW-fxH"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="CXL-4B-HWV" id="ORx-Nm-dya"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SYK-BK-aFi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

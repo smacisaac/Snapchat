@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5CD0EC7120CE6D8472F34F29 /* Pods_Seamus_Snap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 795501DFCB35072D46CCFAC7 /* Pods_Seamus_Snap.framework */; };
 		BDA7B2881EB986A4008B03A7 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA7B2871EB986A4008B03A7 /* PictureViewController.swift */; };
+		BDA7B28A1EBAC2A4008B03A7 /* SelectUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA7B2891EBAC2A4008B03A7 /* SelectUserViewController.swift */; };
 		BDDB71781EB26731004C7A08 /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB71771EB26731004C7A08 /* SnapsViewController.swift */; };
 		BDE2AFEE1EB0307D0019DAEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE2AFED1EB0307D0019DAEB /* AppDelegate.swift */; };
 		BDE2AFF01EB0307D0019DAEB /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE2AFEF1EB0307D0019DAEB /* SignInViewController.swift */; };
@@ -23,6 +24,7 @@
 		5A07E76D4BFA33454C5B8FB9 /* Pods-Seamus Snap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seamus Snap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Seamus Snap/Pods-Seamus Snap.debug.xcconfig"; sourceTree = "<group>"; };
 		795501DFCB35072D46CCFAC7 /* Pods_Seamus_Snap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Seamus_Snap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDA7B2871EB986A4008B03A7 /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
+		BDA7B2891EBAC2A4008B03A7 /* SelectUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUserViewController.swift; sourceTree = "<group>"; };
 		BDDB71771EB26731004C7A08 /* SnapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapsViewController.swift; sourceTree = "<group>"; };
 		BDE2AFEA1EB0307D0019DAEB /* Seamus Snap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Seamus Snap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDE2AFED1EB0307D0019DAEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				BDE2AFED1EB0307D0019DAEB /* AppDelegate.swift */,
 				BDE2AFEF1EB0307D0019DAEB /* SignInViewController.swift */,
 				BDE2AFF11EB0307E0019DAEB /* Main.storyboard */,
+				BDA7B2891EBAC2A4008B03A7 /* SelectUserViewController.swift */,
 				BDA7B2871EB986A4008B03A7 /* PictureViewController.swift */,
 				BDDB71771EB26731004C7A08 /* SnapsViewController.swift */,
 				BDE2AFF41EB0307E0019DAEB /* Assets.xcassets */,
@@ -223,6 +226,7 @@
 			files = (
 				BDE2AFF01EB0307D0019DAEB /* SignInViewController.swift in Sources */,
 				BDA7B2881EB986A4008B03A7 /* PictureViewController.swift in Sources */,
+				BDA7B28A1EBAC2A4008B03A7 /* SelectUserViewController.swift in Sources */,
 				BDE2AFEE1EB0307D0019DAEB /* AppDelegate.swift in Sources */,
 				BDDB71781EB26731004C7A08 /* SnapsViewController.swift in Sources */,
 			);
