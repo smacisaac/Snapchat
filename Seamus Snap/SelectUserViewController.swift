@@ -15,6 +15,8 @@ class SelectUserViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var tableView: UITableView!
     
     var users : [User] = []
+    var imageURL = ""
+    var descrip = ""
     
     
     
@@ -36,10 +38,6 @@ class SelectUserViewController: UIViewController, UITableViewDelegate, UITableVi
             
             self.users.append(user)
             self.tableView.reloadData()
-           
-
-        
-            
         })
 
     }
@@ -58,20 +56,10 @@ class SelectUserViewController: UIViewController, UITableViewDelegate, UITableVi
   
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let user = users[indexPath.row]
-        let snap = ["from":user.email, "description":"hello","imageURL":"www.img.yeaa"]
+        let snap = ["from":user.email, "description":descrip,"imageURL":imageURL]
         
         FIRDatabase.database().reference().child("users").child(user.uid).child("snaps").childByAutoId().setValue(snap)
     }
-    
-    
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
